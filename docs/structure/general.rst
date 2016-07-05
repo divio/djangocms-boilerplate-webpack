@@ -27,7 +27,7 @@ docs/
 
 The full documentation is stored within ``/docs`` and is compiled into
 ``/docs/_build`` when running ``make run``. The documentation is automatically
-pushed to `Read the Docs <https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_
+pushed to `Read the Docs <https://djangocms-boilerplate-webpack.readthedocs.org/en/latest/>`_
 once something is committed to the *master* branch. More information on how to
 contribute to the documentation can be found within the :doc:`/contribution/index`
 section.
@@ -43,14 +43,13 @@ private/
 This folder is intended for storing preprocessing library code (Sass, Less,
 Coffee, HAML, etc). Simply create a folder within ``/private`` with appropriate
 name: ``/sass``, ``/less`` or ``/haml`` and so on as required. Always place
-required configuration files within the ``/private`` root. 
+required configuration files within the ``/private`` root.
 
 .. code-block:: text
 
     private/
-    ├─ sass/
-    │  └─ base.sass
-    └─ config.rb
+    └─ sass/
+       └─ base.sass
 
 .. hint::
    We are using ``/sass`` as folder name and not ``/scss`` as the language

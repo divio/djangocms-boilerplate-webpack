@@ -18,8 +18,8 @@ travis``.
 Sauce Labs
 ==========
 
-`Sauce Labs <https://saucelabs.com/>`_ helps us to run our unit and integration
-tests on multiple browsers.
+`Sauce Labs <https://saucelabs.com/>`_ helps us to run our unit tests on multiple
+browsers.
 
 When using our test suite locally, `phantomjs <http://phantomjs.org>`_ is used
 in the interests of speed, especially on integration tests. However this does
@@ -36,8 +36,8 @@ For each new setup you need to adapt the ``env: global:`` variables by adding::
 Where ``{USER}`` represents the sub-account user name and ``{TOKEN}``
 the sub-account token.
 
-See the example `.travis.yml <https://github.com/aldryn/
-aldryn-boilerplate-bootstrap3/blob/master/.travis.yml>`_:
+See the example `.travis.yml
+<https://github.com/divio/djangocms-boilerplate-webpack/blob/master/.travis.yml>`_:
 
 - the first ``secure`` line in ``env: global:`` represents encrypted Sauce Labs sub-account user name
 - the second ``secure`` line stands for encrypted Sauce Labs sub-account token

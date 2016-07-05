@@ -7,6 +7,15 @@ What's inside
     This Boilerplate includes and configures a number of components.
 
 
+Webpack & Babel
+===============
+
+For JavaScript bundling and preprocessing we use `Webpack
+<http://webpack.github.io>`_, `Babel <http://babeljs.io>`_ with ES2015 preset
+and some essential plugins for smaller builds and easier testing.
+
+We use Gulp as a wrapper around Webpack for consistency.
+
 Sass
 ====
 
@@ -22,13 +31,17 @@ In particular, we use:
 All styles should be created in ``/private/sass``, and will be compiled to
 ``/static/css``.
 
+.. Note::
+
+    We do not use Webpack capabilities for bundling CSS by default, but it is
+    not forbidden.
 
 Bootstrap
 =========
 
 The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the
-`Sass component <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_
-and the `JavaScript component <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
+`Sass component <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/private/sass/libs/_bootstrap.scss>`_
+and the `JavaScript component <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/static/js/libs/bootstrap.min.js>`_.
 
 .. note::
 
@@ -36,7 +49,7 @@ and the `JavaScript component <https://github.com/aldryn/aldryn-boilerplate-boot
 
 
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has
-been `disabled <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
+been `disabled <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
 in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_
 icon set.
 
@@ -51,7 +64,7 @@ than the Bootstrap defaults. Additional
 `utility classes <http://fortawesome.github.io/Font-Awesome/examples/>`_
 are also available.
 
-The `library <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/fontawesome/>`_
+The `library <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/private/sass/libs/fontawesome/>`_
 is similarly integrated as bootstrap-sass within the ``libs`` folder.
 
 

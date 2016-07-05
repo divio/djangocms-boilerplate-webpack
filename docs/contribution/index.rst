@@ -32,8 +32,9 @@ and a GitHub account obviously.
 
 In addition, follow the steps underneath to get them running:
 
-#. clone the repository using ``git clone https://github.com/aldryn/aldryn-boilerplate-bootstrap3.git``
-#. navigate to the documentation through ``cd aldryn-boilerplate-bootstrap3/docs``
+#. clone the repository using ``git clone
+   https://github.com/divio/djangocms-boilerplate-webpack.git``
+#. navigate to the documentation through ``cd djangocms-boilerplate-webpack/docs``
 #. run ``make install`` to install additional requirements
 #. run ``make run`` to let the server run
 
@@ -76,11 +77,11 @@ to be merged.
 Releases
 ********
 
-- Adapt the `CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
-- Adapt `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/AUTHORS.rst>`_ if required
-- Bump version in `boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_
-- Create a `GitHub tag <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/tags>`_
-- Add the release notes on the `GitHub tag <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_
+- Adapt the `CHANGELOG.rst <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/CHANGELOG.rst>`_
+- Adapt `AUTHORS.rst <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/AUTHORS.rst>`_ if required
+- Bump version in `boilerplate.json <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/boilerplate.json>`_
+- Create a `GitHub tag <https://github.com/divio/djangocms-boilerplate-webpack/tags>`_
+- Add the release notes on the `GitHub tag <https://github.com/divio/djangocms-boilerplate-webpack/releases>`_
 - Build new tag on `readthedocs.org <https://readthedocs.org/projects/aldryn-boilerplate-bootstrap3/>`_
 - Run ``bash tools/release.sh`` before release on `Aldryn <http://control.aldryn.com>`_
 - Run ``aldryn boilerplate upload`` to release on `Aldryn <http://control.aldryn.com>`_

@@ -11,11 +11,11 @@ interactions.
 This testing infrastructure includes them both with `Jasmine
 <http://jasmine.github.io/>`_ as the test suite and `Karma
 <http://karma-runner.github.io/>`_ as the test runner for unit tests.
-`Protractor <http://www.protractortest.org>`_ serves as the integration tests framework.
+`CasperJS <http://casperjs.org>`_ serves as the integration tests framework.
 Both tests can be run separately as described in :ref:`testing_commands` below.
 
 All tests are located within ``/tests``. Each pull request is validated on
-`Travis <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob
+`Travis <https://github.com/divio/djangocms-boilerplate-webpack/blob
 /master/.travis.yml>`_, which runs the test executing the ``gulp tests``
 command. You can also run this command locally, if you followed the
 :doc:`/general/installation` instructions.
@@ -39,23 +39,15 @@ Naming
 The naming for tests should adhere to the conventions established in
 :doc:`/guidelines/general` and :doc:`/guidelines/javascript`.
 
-**Unit tests** should be prefixed using ``test`` before the name file name and
-**integration tests** use ``spec``. For example:
+**Unit tests** should be suffixed using ``test`` before the file extension. For
+example:
 
 .. code-block:: text
 
-    test.header.js
-    test.footer.js
-    test.content.typography.js
-    test.content.wysiwyg.js
-    ...
-
-.. code-block:: text
-
-    spec.header.js
-    spec.footer.js
-    spec.content.typography.js
-    spec.content.wysiwyg.js
+    header.test.js
+    footer.test.js
+    content.typography.test.js
+    content.wysiwyg.test.js
     ...
 
 
@@ -77,7 +69,7 @@ The starting structure looks like this:
     ├─ unit/
     ├─ base.conf.js
     ├─ karma.conf.js
-    └─ protractor.conf.js
+    └─ casperjs.conf.js
 
 Fixtures and coverage are described in more depth within
 :doc:`/testing/unit_tests`.
@@ -87,8 +79,7 @@ Configuration
 =============
 
 The configuration files are located at the root of the ``/tests`` folder.
-``karma.conf.js`` defines the settings for the ``gulp tests:unit`` command and
-``protractor.conf.js`` for the ``gulp tests:integration`` command.
+``karma.conf.js`` defines the settings for the ``gulp tests:unit``.
 
 The function of these configuration files is described in more depth within
 :doc:`/testing/unit_tests` or :doc:`/testing/integration_tests`.
