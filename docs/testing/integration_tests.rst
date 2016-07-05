@@ -6,47 +6,25 @@ Integration Tests
 Configuration
 =============
 
-The main configuration file to look at is ``/tests/protractor.conf.js``.
-It configures our ``browserName``.
+The main configuration file to look at is ``/tests/integration/index.js``.
 
-In ``browserName`` we specify the browser that will be used to launch the tests.
-It can be set to ``phantomjs``, ``firefox`` or ``chrome``.
-
-You can find more information about this in the
-`protractor referenceConf.js <https://github.com/angular/protractor/blob/master/docs/referenceConf.js>`_
-documentation.
-
-All spec files should be placed in ``/tests/integration/specs`` and all page
-object files should be in ``/tests/integration/pages``. So, the file organisation
-structure is:
+All spec files should be placed in ``/tests/integration/`` and referenced in ``index.js``.
+So, the file organisation structure is:
 
 .. code-block:: text
 
     tests/
     └─ integration/
-       ├─ specs/
-       │   ├─ spec.name.js
-       │   └─ spec.another.name.js
-       └─ pages/
-           ├─ page.name.js
-           └─ page.another.name.js
+       ├─ index.js (entry file)
+       ├─ index.bundle.js (compiled by webpack automatically)
+       ├─ test-name-1.js
+       └─ test-name-2.js
 
-The specs that will be launched are defined in the ``gulpfile.js``. They can be
-specified using patterns:
+The specs that will be launched are defined in the ``index.js``. They can be
+specified using command arguments:
 
-.. code-block:: javascript
+.. code-block:: bash
 
-    return gulp.src([PROJECT_PATH.tests + '/integration/specs/*.js'])
+    gulp tests:integration --tests=test1,test2
 
-By default all specs inside ``/tests/integration/specs`` folder will be launched.
-
-
-Coverage
-========
-
-Integration coverage is measured by the number of critical path or regression
-test cases that were automated. Keep in mind that the success of your project
-does not depend on the tests or the percentage of your code coverage, but it
-will improve maintenance and give you and other contributors more confidence in
-the quality of the product you produce. We should aim for the highest possible
-coverage and quality.
+By default all specs inside ``/tests/integration/`` folder will be launched.
