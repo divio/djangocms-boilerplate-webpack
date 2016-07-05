@@ -22,3 +22,4 @@ before_script:
 
 script:
   - gulp tests
+  - gulp tests:integration
