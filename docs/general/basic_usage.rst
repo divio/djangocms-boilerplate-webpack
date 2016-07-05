@@ -14,7 +14,7 @@ See :doc:`/structure/templates` for guidelines on how to set up your project
 templates so that they take advantage of what it has to offer.
 
 Fundamentally, if your project's templates inherit from the
-`base.html <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/templates/base.html>`_
+`base.html <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/templates/base.html>`_
 template, they'll be furnished with the classes, elements, hooks and other
 things they need.
 

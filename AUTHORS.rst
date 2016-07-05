@@ -2,7 +2,9 @@
 Authors
 #######
 
-Thanks to all the developers for the excellent contribution to this boilerplate.
+Thanks to all the developers for the excellent contribution to this boilerplate
+and the boilerplate it is based on - `aldryn-boilerplate-bootstrap3
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3>`_.
 
 
 ***************
@@ -18,7 +20,7 @@ Contributors
 ************
 
 Please refere to the section within
-`GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/graphs/contributors/>`_ if outdated:
+`GitHub <https://github.com/divio/djangocms-boilerplate-webpack/graphs/contributors/>`_ if outdated:
 
 * Ales Kocjancic
 * Angelo Dini

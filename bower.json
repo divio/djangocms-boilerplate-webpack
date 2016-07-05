@@ -1,5 +1,5 @@
 {
-    "name": "aldryn-boilerplate-bootstrap3",
+    "name": "djangocms-boilerplate-webpack",
     "private": true,
     "dependencies": {
         "bootstrap-sass-official": "3.3.5",
