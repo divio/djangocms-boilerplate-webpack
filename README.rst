@@ -17,7 +17,7 @@ www.aldryn.com/>`_ cloud platform.
 Documentation
 *************
 
-A full documentation can be found on `Read the Docs <http://djangocms-boilerplate-webpack.rtfd.org>`_.
+A full documentation can be found on `Read the Docs <http://django-cms-boilerplate-webpack.rtfd.org>`_.
 
 
 ************
