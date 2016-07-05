@@ -2,7 +2,7 @@
 django CMS webpack boilerplate
 ##############################
 
-|Build Status| |Coverage Status| |Code Climate| |Dependency Status|
+|Build Status| |Coverage Status|
 
 Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
 full potential of the `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile-first
@@ -31,9 +31,5 @@ needs love. Feel free to fork and send us pull requests and checkout the
 
 .. |Build Status| image:: https://travis-ci.org/divio/djangocms-boilerplate-webpack.svg?branch=master
    :target: https://travis-ci.org/divio/djangocms-boilerplate-webpack
-.. |Dependency Status| image:: https://gemnasium.com/divio/djangocms-boilerplate-webpack.svg
-   :target: https://gemnasium.com/divio/djangocms-boilerplate-webpack
 .. |Coverage Status| image:: https://coveralls.io/repos/divio/djangocms-boilerplate-webpack/badge.svg?branch=master&service=github
    :target: https://coveralls.io/github/divio/djangocms-boilerplate-webpack?branch=master
-.. |Code Climate| image:: https://codeclimate.com/github/divio/djangocms-boilerplate-webpack/badges/gpa.svg
-   :target: https://codeclimate.com/github/divio/djangocms-boilerplate-webpack

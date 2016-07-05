@@ -1,5 +1,3 @@
-'use strict';
-
 var gutil = require('gulp-util');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');

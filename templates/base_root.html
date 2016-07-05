@@ -34,12 +34,7 @@
 
 {% block extend_root %}{% endblock %}
 
-<script src="{% static 'js/libs/jquery.min.js' %}"></script>
-<script src="{% static 'js/libs/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/libs/class.min.js' %}"></script>
-<script src="{% static 'js/libs/outdatedBrowser.min.js' %}"></script>
-<script src="{% static 'js/addons/cl.utils.js' %}"></script>
-<script src="{% static 'js/base.js' %}"></script>
+<script src="{% static 'js/dist/bundle.js' %}"></script>
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}
 {{ ALDRYN_SNAKE.render_tail }}

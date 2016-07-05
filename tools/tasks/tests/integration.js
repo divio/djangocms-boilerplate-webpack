@@ -1,5 +1,3 @@
-'use strict';
-
 var gutil = require('gulp-util');
 var protractor = require('gulp-protractor').protractor;
 

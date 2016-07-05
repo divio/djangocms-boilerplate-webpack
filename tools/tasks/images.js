@@ -1,5 +1,3 @@
-'use strict';
-
 var gutil = require('gulp-util');
 var cache = require('gulp-cached');
 var imagemin = require('gulp-imagemin');

@@ -1,16 +1,18 @@
 /*
  * Copyright (c) 2013, Divio AG
  * Licensed under BSD
- * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
+ * http://github.com/divio/djangocms-boilerplate-webpack
  */
 
 /* eslint no-shadow: 0 */
 
-'use strict';
-
 // #############################################################################
 // CONFIGURATION
 var baseConf = require('./base.conf');
+// var path = require('path');
+var webpackBaseConfig = require('../webpack.config.base');
+
+process.env.NODE_ENV = 'test';
 
 module.exports = function (config) {
     var browsers = {
@@ -39,15 +41,6 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         // tests/${path}
         files: [
-            // these have to be specified in order since
-            // dependency loading is not handled yet
-            'static/js/libs/jquery.min.js',
-            'static/js/libs/bootstrap.min.js',
-            'static/js/libs/class.min.js',
-            'static/js/libs/outdatedBrowser.min.js',
-            'static/js/addons/*.js',
-            'static/js/*.js',
-
             // tests themselves
             'tests/unit/*.js',
 
@@ -65,9 +58,9 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            // add specific files for coverage
-            'static/js/base.js': ['coverage'],
-            'static/js/addons/cl.utils.js': ['coverage'],
+            'tests/unit/helpers/*.js': ['webpack', 'sourcemap'],
+            'tests/unit/*.js': ['webpack', 'sourcemap'],
+            'static/js/**/*.js': ['webpack', 'sourcemap'],
             // for fixtures
             '**/*.html': ['html2js'],
             '**/*.json': ['json_fixtures']
@@ -91,6 +84,14 @@ module.exports = function (config) {
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['progress', 'coverage', 'coveralls', 'saucelabs'],
+
+        webpack: {
+            cache: true,
+            devtool: 'inline-source-map',
+            debug: true,
+            resolve: webpackBaseConfig.resolve,
+            module: webpackBaseConfig.module
+        },
 
         // web server port
         port: 9876,

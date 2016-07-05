@@ -1,10 +1,9 @@
 /*
  * Copyright (c) 2013, Divio AG
  * Licensed under BSD
- * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
+ * http://github.com/divio/djangocms-boilerplate-webpack
  */
 
-'use strict';
 /* global browser */
 
 // #############################################################################
@@ -17,7 +16,7 @@ var config = {
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
         'browserName': 'phantomjs',
-        'phantomjs.binary.path': require('phantomjs').path
+        'phantomjs.binary.path': require('phantomjs-prebuilt').path
     },
 
     onPrepare: function () {

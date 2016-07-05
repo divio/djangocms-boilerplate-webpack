@@ -1,5 +1,3 @@
-'use strict';
-
 var yuidoc = require('gulp-yuidoc');
 
 module.exports = function (gulp, opts) {
