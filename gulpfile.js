@@ -6,7 +6,6 @@
 
 // #############################################################################
 // IMPORTS
-var webdriverUpdate;
 var argv = require('minimist')(process.argv.slice(2));
 var gulp = require('gulp');
 
@@ -65,7 +64,8 @@ function task (id) {
         PROJECT_PATH: PROJECT_PATH,
         PROJECT_PATTERNS: PROJECT_PATTERNS,
         DEBUG: DEBUG,
-        PORT: PORT
+        PORT: PORT,
+        argv: argv
     });
 }
 
@@ -93,11 +93,13 @@ if (process.env.GULP_MODE !== 'production') {
     gulp.task('tests:lint', ['lint:javascript']);
     gulp.task('tests:unit', task('tests/unit'));
     gulp.task('tests:watch', ['tests:lint'], task('tests/watch'));
-    gulp.task('tests', ['tests:unit', 'tests:integration', 'tests:lint']);
+    gulp.task('tests', ['tests:unit', 'tests:lint']);
+    gulp.task('tests:integration:webpack', task('tests/webpack'));
 
-    webdriverUpdate = require('gulp-protractor').webdriver_update;
-    gulp.task('tests:webdriver', webdriverUpdate);
-    gulp.task('tests:integration', ['tests:webdriver'], task('tests/integration'));
+    // Running integration tests on CI is usually problematic,
+    // since the environment to test against must be prepared.
+    // It is possible, but shouldn't be enforced by default.
+    gulp.task('tests:integration', ['tests:integration:webpack'], task('tests/integration'));
 }
 
 gulp.task('watch', ['webpack:watch'], function () {
