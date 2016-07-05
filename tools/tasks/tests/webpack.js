@@ -1,7 +1,7 @@
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 
-module.exports = function (gulp, opts) {
+module.exports = function () {
     return function (callback) {
         var config = 'webpack.config.tests';
 

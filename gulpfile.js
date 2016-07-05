@@ -41,7 +41,8 @@ var PROJECT_PATTERNS = {
         '!' + PROJECT_PATH.js + '/**/*.min.js',
         '!' + PROJECT_PATH.js + '/dist/*.js',
         '!' + PROJECT_PATH.tests + '/coverage/**/*',
-        '!' + PROJECT_PATH.tests + '/unit/helpers/**/*'
+        '!' + PROJECT_PATH.tests + '/unit/helpers/**/*',
+        '!' + PROJECT_PATH.tests + '/integration/*.bundle.js'
     ],
     sass: [
         PROJECT_PATH.sass + '/**/*.{scss,sass}'
