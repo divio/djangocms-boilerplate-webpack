@@ -1,11 +1,11 @@
-'use strict';
-
-var karma = require('karma').server;
+var Server = require('karma').Server;
 
 module.exports = function (gulp, opts) {
     return function () {
-        karma.start({
+        var server = new Server({
             configFile: opts.PROJECT_PATH.tests + '/karma.conf.js'
         });
+
+        server.start();
     };
 };

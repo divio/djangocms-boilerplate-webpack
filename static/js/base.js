@@ -1,38 +1,27 @@
 /*
  * Copyright (c) 2013, Divio AG
  * Licensed under BSD
- * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
+ * http://github.com/divio/djangocms-boilerplate-webpack
  */
 
-'use strict';
+import $ from 'jquery';
+import outdatedBrowser from 'outdatedbrowser';
+import 'bootstrap';
+import { noscript } from './addons/utils';
 
-// #############################################################################
-// NAMESPACES
-/**
- * @module Cl
- */
+// this should usually be disabled, but sometimes
+// we rely on jQuery global being available :/
+window.$ = window.jQuery = $;
+
 // istanbul ignore next
-var Cl = window.Cl || {};
-/* global outdatedBrowser */
+// shorthand for invoking jQuery(document).ready
+$(function () {
+    // removes noscript form body
+    noscript();
 
-// #############################################################################
-// BASE
-// istanbul ignore next
-(function ($) {
-    // shorthand for invoking jQuery(document).ready
-    $(function () {
-        // removes noscript form body and adds print-js
-        if (window.Cl && window.Cl.Utils) {
-            Cl.Utils._document();
-        }
-
-        // DOCS: https://github.com/burocratik/outdated-browser
-        if (window.outdatedBrowser) {
-            outdatedBrowser({
-                languagePath: '',
-                lowerThan: 'boxShadow'
-            });
-        }
+    // DOCS: https://github.com/burocratik/outdated-browser
+    outdatedBrowser({
+        languagePath: '',
+        lowerThan: 'boxShadow'
     });
-
-})(jQuery);
+});

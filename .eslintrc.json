@@ -2,12 +2,18 @@
     "env": {
         "browser": true,
         "node": true,
-        "jquery": true
+        "jquery": true,
+        "jasmine": true,
+        "es6": true
     },
     "globals": {
-      "process.env": true
+      "process.env": true,
+      "__DEV__": true
     },
     "root": true,
+    "ecmaFeatures": {
+        "modules": true
+    },
     "rules": {
         // Possible Errors
         "comma-dangle": [2, "never"],
@@ -174,6 +180,9 @@
         "space-unary-ops": 2,
         "spaced-comment": 2,
         "wrap-regex": 2,
+
+        // ES6
+        "arrow-parens": [2, "always"],
 
         // Legacy
         "max-depth": [2, 4],

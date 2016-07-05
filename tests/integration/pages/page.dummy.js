@@ -1,14 +1,8 @@
 /*
  * Copyright (c) 2013, Divio AG
  * Licensed under BSD
- * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
+ * http://github.com/divio/djangocms-boilerplate-webpack
  */
-
-// ACCEPTANCE TEST
-// #############################################################################
-'use strict';
-/* jshint browser: true */
-/* jshint shadow: true */
 
 /*
  * This file uses the Page Object pattern to define a test.

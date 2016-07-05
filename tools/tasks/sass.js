@@ -1,5 +1,3 @@
-'use strict';
-
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');

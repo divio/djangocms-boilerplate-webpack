@@ -1,5 +1,3 @@
-'use strict';
-
 var eslint = require('gulp-eslint');
 
 module.exports = function (gulp, opts) {
