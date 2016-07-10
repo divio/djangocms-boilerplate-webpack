@@ -2,6 +2,12 @@
 djangocms-boilerplate-webpack
 #############################
 
+Unreleased
+==========
+
+- Fixed a bug when lint error could prevent other gulp tasks from running
+
+
 1.0.1
 =====
 

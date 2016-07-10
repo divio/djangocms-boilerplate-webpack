@@ -103,7 +103,8 @@ if (process.env.GULP_MODE !== 'production') {
     gulp.task('tests:integration', ['tests:integration:webpack'], task('tests/integration'));
 }
 
-gulp.task('watch', ['webpack:watch'], function () {
+gulp.task('watch', function () {
+    gulp.start('webpack:watch');
     gulp.watch(PROJECT_PATTERNS.sass, ['sass']);
     gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
