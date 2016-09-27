@@ -1,6 +1,7 @@
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
+var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
@@ -32,10 +33,14 @@ module.exports = function (gulp, opts) {
                     process.exit(1);
                 }
             })
-            .pipe(autoprefixer({
-                // browsers are coming from browserslist file
-                cascade: false
-            }))
+            .pipe(
+                postcss([
+                    autoprefixer({
+                        // browsers are coming from browserslist file
+                        cascade: false
+                    })
+                ])
+            )
             .pipe(minifyCss({
                 rebase: false
             }))
