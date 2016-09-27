@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 import outdatedBrowser from 'outdatedbrowser';
-import 'bootstrap';
+import 'bootstrap-sass';
 import { noscript } from './addons/utils';
 
 // this should usually be disabled, but sometimes

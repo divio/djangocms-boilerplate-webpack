@@ -5,13 +5,23 @@ var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
 var header = require('gulp-header');
+var Eyeglass = require('eyeglass').Eyeglass;
+
+// https://gist.github.com/chriseppstein/d7be56e21b216275bd86
+var eyeglass = new Eyeglass({
+    importer: function (uri, prev, done) {
+        done(sass.compiler.types.NULL);
+    }
+});
+
+eyeglass.enableImportOnce = false;
 
 module.exports = function (gulp, opts) {
     return function () {
         gulp.src(opts.PROJECT_PATTERNS.sass)
             // sourcemaps can be activated through `gulp sass --debug´
             .pipe(gulpif(opts.DEBUG, sourcemaps.init()))
-            .pipe(sass())
+            .pipe(sass(eyeglass.sassOptions()))
             .on('error', function (error) {
                 gutil.log(gutil.colors.red(
                     'Error (' + error.plugin + '): ' + error.messageFormatted)
