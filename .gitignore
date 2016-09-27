@@ -12,6 +12,7 @@
 .mr.developer.cfg
 .idea
 .sass-cache
+.eyeglass_cache
 
 /tmp
 /env
