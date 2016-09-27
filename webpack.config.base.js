@@ -19,8 +19,8 @@ module.exports = {
     resolve: {
         extensions: ['', '.js'],
         alias: {
-            jquery: __dirname + '/static/js/libs/jquery.min.js',
-            outdatedbrowser: __dirname + '/static/js/libs/outdatedBrowser.min.js',
+            jquery: require.resolve('jquery'),
+            outdatedbrowser: __dirname + '/static/js/libs/outdatedBrowser.min.js'
         }
     },
     module: {
