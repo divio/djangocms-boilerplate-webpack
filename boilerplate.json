@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
     "package-name": "djangocms-boilerplate-webpack",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "templates": [
         ["base.html", "base"]
     ],

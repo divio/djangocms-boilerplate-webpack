@@ -2,8 +2,8 @@
 djangocms-boilerplate-webpack
 #############################
 
-Unreleased
-==========
+1.1.0
+=====
 
 - Fixed a bug when lint error could prevent other gulp tasks from running
 - Load bootstrap and jquery from node modules, both for JavaScript and Sass
