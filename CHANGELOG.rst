@@ -2,6 +2,14 @@
 djangocms-boilerplate-webpack
 #############################
 
+
+1.1.1
+=====
+
+- Fixed an issue with ``404.html`` inheriting from ``fullwidth.html``
+- Removed ``fullwidth.html`` references from documentation
+
+
 1.1.0
 =====
 
