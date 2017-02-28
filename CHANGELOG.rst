@@ -3,6 +3,12 @@ djangocms-boilerplate-webpack
 #############################
 
 
+1.1.2
+=====
+
+- Pinned ``exports-loader`` package for compatibility
+
+
 1.1.1
 =====
 

@@ -10,7 +10,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-runtime": "^6.3.19",
     "bootstrap-sass": "^3.3.7",
-    "exports-loader": "^0.6.2",
+    "exports-loader": "0.6.2",
     "eyeglass": "^0.7.1",
     "gulp": "^3.9.0",
     "gulp-bower": "^0.0.10",
