@@ -3,6 +3,12 @@ djangocms-boilerplate-webpack
 #############################
 
 
+1.2.0
+=====
+
+Add boilerplate-specific Dockerfile with node installation
+
+
 1.1.2
 =====
 
