@@ -1,16 +1,31 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+# <DEFAULT>  # Warning: text inside the DEFAULT tags is auto-generated on Divio Cloud. Manual changes will be overwritten.
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Python
 *.pyc
 *.pyo
-*~
-.hg
-.git
-.svn
-.DS_Store
-.settings
-.project
-.pydevproject
-.installed.cfg
-.mr.developer.cfg
-.idea
+
+# Aldryn
+/.env
+/.env-local
+.aldryn
+/data
+/data.tar.gz
+/static_collected
+/node_modules
+# </DEFAULT>
+
 .sass-cache
 .eyeglass_cache
 
@@ -22,7 +37,6 @@
 /src/settings_local*.py
 /requirements_local*.txt
 
-/node_modules
 /bower_components
 npm-debug.log
 *.css.map
