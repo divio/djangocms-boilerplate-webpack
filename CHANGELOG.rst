@@ -2,11 +2,15 @@
 djangocms-boilerplate-webpack
 #############################
 
+1.2.1
+=====
+
+- Inherited gitignore from Divio Cloud
 
 1.2.0
 =====
 
-Add boilerplate-specific Dockerfile with node installation
+- Add boilerplate-specific Dockerfile with node installation
 
 
 1.1.2
