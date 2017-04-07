@@ -10,6 +10,11 @@
 // $bootstrap-sass-asset-helper:
 // (twbs-font-path("") != unquote('twbs-font-path("")'))
 
+// copied directly from _variables.scss
+// updated from Bootstrap v3.3.7 (http://getbootstrap.com)
+
+/* stylelint-disable */
+
 $bootstrap-sass-asset-helper: false;
 //
 // Variables
@@ -92,12 +97,12 @@ $headings-color:          inherit;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");
+// $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");
 
 //** File name for all font files.
-$icon-font-name:          "glyphicons-halflings-regular";
+// $icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
-$icon-font-svg-id:        "glyphicons_halflingsregular";
+// $icon-font-svg-id:        "glyphicons_halflingsregular";
 
 
 //== Components
@@ -339,7 +344,7 @@ $screen-md-max:              ($screen-lg-min - 1);
 //## Define your custom responsive grid.
 
 //** Number of columns in the grid.
-$grid-columns:              24;
+$grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         30px;
 // Navbar collapse
