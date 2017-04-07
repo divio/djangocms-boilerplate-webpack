@@ -7,8 +7,6 @@ Installation
     The following dependencies should be installed on your system in order to
     work with this Boilerplate.
 
-- Sass: http://sass-lang.com/
-- Bootstrap: https://github.com/twbs/bootstrap-sass
 - Node JS: http://nodejs.org/
 - Gulp: http://gulpjs.com/
 
@@ -17,7 +15,6 @@ You can find most installation steps within
 
 #. run ``brew install node`` when using `Homebrew <http://brew.sh/>`_
 #. run ``curl -L https://npmjs.org/install.sh | sh``
-#. run ``npm install -g bower``
 #. run ``npm install -g gulp``
 
 At last make sure you correctly configured your
@@ -27,43 +24,34 @@ At last make sure you correctly configured your
 Setup
 =====
 
-Run the following commands to install all requirements from within the root of the package:
+Run the following command to install all requirements from within the root of the package:
 
 - ``npm install`` to install the requirements from ``package.json``
-- ``bower install`` to install the requirements from ``bower.json`` via ``.bowerrc``
 
 
 Gulp Commands
 =============
 
-.. warning::
-
-    Please mind that ``gulp browser`` starts *browserSync* which tries to
-    connect to a server. A Django server can be started from within
-    ``tools/server``. Refer the :doc:`/testing/general` section for
-    additional information.
-
 All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_
 task runner:
 
-- ``gulp`` runs the gulp defaults
-- ``gulp browser`` connects to a given server (django) and runs live reload on a separate IP
-- ``gulp lint`` starts all linting services using ``.eslintrc.json`` and ``scss-lint.json``
-- ``gulp preprocess`` optimises images within ``/static/img`` and compiles YUIDoc into ``static/docs``
-- ``gulp sass`` to compile the stylesheets
-- ``gulp tests`` runs the test suite
+- ``gulp sass`` compiles sass and splits critical from non-critical css
+- ``gulp lint`` starts all linting services using ``.eslintrc.js`` and ``.stylelintrc.js``
+- ``gulp webpack`` compiles javascript
+- ``gulp icons`` generates an svg-sprite
+- ``gulp optimise`` optimises images within ``/static/img`` and svgs within ``/private/svg``
+
+For generic usage use:
+
+- ``gulp default`` runs the default gulp commands
 - ``gulp watch`` runs the gulp watch defaults
+- ``gulp build`` this is the command that is also run on Divio Cloud when deploying
 
-We also offer some standalone commands:
+.. note::
 
-- ``gulp bower`` to install the bower dependencies
-- ``gulp images`` optimises images within ``/static/img``
-- ``gulp icons`` to create a custom icon webfont
-- ``gulp docs`` compiles YUIDoc into ``static/docs``
-- ``gulp lint:javascript`` runs JavaScript linting
-- ``gulp lint:sass`` runs Sass linting
-- ``gulp tests:unit`` runs unit tests
-- ``gulp tests:integration`` runs integration tests
-- ``gulp tests:watch`` runs tests in debugging mode
+    You can append ``--debug`` to almost all of the commands to enable debugging,
+    sourcemaps, disable minification and more.
+
+For a full set of commands checkout the tasks inside the ``Gulpfile.js``.
 
 We love code over configuration.

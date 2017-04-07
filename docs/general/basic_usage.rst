@@ -2,8 +2,8 @@
 Basic usage
 ###########
 
-Once installed in an Aldryn or django CMS project,
-Aldryn Boilerplate Bootstrap 3 is ready to use.
+Once installed in a Divio Cloud or django CMS project,
+django CMS Boilerplate Webpack is ready to use.
 
 
 ===============
@@ -23,11 +23,11 @@ things they need.
 In your applications
 ====================
 
-Your applications, if they are aware of Aldryn Boilerplate Bootstrap 3, can
+Your applications, if they are aware of django CMS Boilerplate Webpack, can
 also take advantage of it.
 
-You could simply make your application assume that Aldryn Boilerplate
-Bootstrap 3 will be available. That's not ideal though, because it will be
+You could simply make your application assume that django CMS Boilerplate Webpack
+will be available. That's not ideal though, because it will be
 off-putting to people who don't want to have to use it. A reusable application
 should have requirements that are as generic as possible, not based on a
 particular frontend framework.
@@ -41,35 +41,35 @@ to create templates and static file for it that support their own frontend
 conventions if they can start with simple ones.
 
 
-Aldryn Boilerplates
-===================
+Divio Cloud Boilerplates
+========================
 
 To make this easier, use the
 `Aldryn Boilerplates <https://github.com/aldryn/aldryn-boilerplates>`_
 application.
 
 This provides support for multiple Boilerplates, allowing you to offer rich
-frontend machinery compatible with Aldryn Boilerplate Bootstrap3 for those who
+frontend machinery compatible with django CMS Boilerplate Webpack for those who
 want it, and generic frontend files for those who don't, in a way that the
 correct set will automatically be chosen.
 
 You can also add support for *other* Boilerplates, by adding the frontend
 files to namespaced directories in your application. This example of an
-application named `aldryn_addon` mentions only templates for sake of simplicity,
+application named `djangocms_addon` mentions only templates for sake of simplicity,
 but the same principle applies to static files::
 
-    aldryn_addon
+    djangocms_addon
     ├─ templates/  # the generic templates
-    │  ├─ aldryn_addon/
+    │  ├─ djangocms_addon/
     │  └─ base.html
     ├─ boilerplates/  # templates for particular Boilerplates
-    │  └─ aldryn_boilerplate_bootstrap3/
+    │  └─ bootstrap3/
     │     └─ templates/
-    │        ├─ aldryn_addon/
+    │        ├─ djangocms_addon/
     │        └─ base.html
     └─ some_other_boilerplate/
        └─ templates/
-          ├─ aldryn_addon/
+          ├─ djangocms_addon/
           └─ base.html
 
 See `Aldryn Boilerplates <https://github.com/aldryn/aldryn-boilerplates>`_

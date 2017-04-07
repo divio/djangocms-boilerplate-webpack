@@ -4,7 +4,7 @@ Contribution
 
 .. note::
 
-    You are very welcome improving this boilerplate for Aldryn and your
+    You are very welcome improving this boilerplate for Divio Cloud and your
     everyday use, especially the documentation always needs love. Feel free to
     fork and send us pull requests and follow the guidelines from within this
     section.
@@ -16,7 +16,6 @@ Code of Conduct
 
 - Ensure code validates against or own guidelines
 - Write documentation about what you are doing
-- If you are not sure, just ask - join our community **#aldryn** on `Freenode <http://freenode.net/>`_
 
 
 *************
@@ -50,7 +49,7 @@ to format the documentation properly.
 
     - Always start paths with a ``/`` and leave the trailing slash.
     - Leave two spaces before a title.
-    - Write "Django", "django CMS" or "Aldryn".
+    - Write "Django", "django CMS" or "Divio Cloud".
     - Write names properly: Sass, Bootstrap, JavaScript instead of sass (or SASS), bootstrap and javascript.
     - Additional guidelines from `django CMS
       <http://docs.django-cms.org/en/develop/contributing/contributing.html#documentation-markup>`_ apply.
@@ -82,8 +81,7 @@ Releases
 - Bump version in `boilerplate.json <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/boilerplate.json>`_
 - Create a `GitHub tag <https://github.com/divio/djangocms-boilerplate-webpack/tags>`_
 - Add the release notes on the `GitHub tag <https://github.com/divio/djangocms-boilerplate-webpack/releases>`_
-- Build new tag on `readthedocs.org <https://readthedocs.org/projects/aldryn-boilerplate-bootstrap3/>`_
-- Run ``bash tools/release.sh`` before release on `Aldryn <http://control.aldryn.com>`_
-- Run ``aldryn boilerplate upload`` to release on `Aldryn <http://control.aldryn.com>`_
+- Build new tag on `readthedocs.org <https://readthedocs.org/projects/djangocms-boilerplate-webpack/>`_
+- Run ``bash tools/release.sh`` before release on `Divio Cloud <http://control.divio.com>`_
+- Run ``divio boilerplate upload`` to release on `Divio Cloud <http://control.divio.com>`_
 - Test, inform, present
-

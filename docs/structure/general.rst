@@ -13,24 +13,12 @@ General
     private/
     static/
     templates/
-    tests/
 
 The starting point for each entry is always named "base"``", with the
 appropriate file extension. For HTML ``base.html``, Sass ``base.scss``,
 JavaScript ``base.js`` – you get the idea. This way you always know which file
 you should look after **first**. Lets take a closer look at each individual
 folder:
-
-
-docs/
-=====
-
-The full documentation is stored within ``/docs`` and is compiled into
-``/docs/_build`` when running ``make run``. The documentation is automatically
-pushed to `Read the Docs <https://djangocms-boilerplate-webpack.readthedocs.org/en/latest/>`_
-once something is committed to the *master* branch. More information on how to
-contribute to the documentation can be found within the :doc:`/contribution/index`
-section.
 
 
 private/
@@ -94,9 +82,3 @@ The default *index.html* is always ``/templates/base.html``.
 Global inclusion files are placed within ``/templates/includes``.
 Addons normally have their own */includes* folder so they are not overcrowding
 the structure.
-
-
-tests/
-======
-
-The test suite is described in more depth within the :doc:`../testing/index` section.
