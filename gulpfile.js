@@ -4,7 +4,7 @@
  * http://github.com/divio/djangocms-boilerplate-webpack
  */
 
-// TODO:
+// INFO:
 // - The minimatch/graceful-fs warnings are from gulp, needs upgrade to 4.0 once released.
 
 // #############################################################################
@@ -17,7 +17,8 @@ const gulp = require('gulp');
 const PROJECT_ROOT = __dirname;
 const PROJECT_PATH = {
     css: PROJECT_ROOT + '/static/css',
-    // images: PROJECT_ROOT + '/static/img',
+    html: PROJECT_ROOT + '/templates',
+    images: PROJECT_ROOT + '/static/img',
     sass: PROJECT_ROOT + '/private/sass',
     sprites: PROJECT_ROOT + '/static/sprites',
     svg: PROJECT_ROOT + '/private/svg',
@@ -25,13 +26,12 @@ const PROJECT_PATH = {
     webpack: PROJECT_ROOT + '/private/js',
 };
 const PROJECT_PATTERNS = {
-    // images: [
-    //     PROJECT_PATH.images + '/**/*',
-    //     // exclude from preprocessing
-    //     '!' + PROJECT_PATH.images + '/dummy/*/**'
-    // ],
-    svg: [
-        PROJECT_PATH.svg + '/**/*.svg',
+    css: [
+        PROJECT_PATH.css + '/*base*.css',
+        '!' + PROJECT_PATH.css + '/*-critical.css',
+    ],
+    images: [
+        PROJECT_PATH.images + '/**/*',
     ],
     js: [
         '*.js',
@@ -41,21 +41,14 @@ const PROJECT_PATTERNS = {
         '!' + PROJECT_PATH.webpack + '/*.min.js',
         '!' + PROJECT_PATH.webpack + '/**/*.min.js',
     ],
-    css: [
-        PROJECT_PATH.css + '/*base*.css',
-        '!' + PROJECT_PATH.css + '/*-critical.css',
-    ],
     sass: [
         PROJECT_PATH.sass + '/**/*.{scss,sass}',
         '!' + PROJECT_PATH.sass + '/libs/_svgsprite.scss',
     ],
+    svg: [
+        PROJECT_PATH.svg + '/**/*.svg',
+    ],
 };
-//
-// var DEFAULT_PORT = 8000;
-// var PORT = parseInt(process.env.PORT, 10) || DEFAULT_PORT;
-
-// #############################################################################
-// TASKS
 
 /**
  * Checks project deployment
@@ -70,6 +63,9 @@ function task(id) {
         argv: argv,
     });
 }
+
+// #############################################################################
+// TASKS
 
 /**
  * Usage:
@@ -117,9 +113,11 @@ gulp.task('icons', task('icons/svgsprite'));
  * Usage:
  * - "gulp optimise" (runs various optimisation tools)
  * - "gulp optimise:svg" (ensures svg files are minified and optimised)
+ * - "gulp optimise:images" (ensures images files are optimised)
  */
 gulp.task('optimise', ['optimise:svg']);
 gulp.task('optimise:svg', task('optimise/svg'));
+gulp.task('optimise:images', task('optimise/images'));
 
 /**
  * process.env.GULP_MODE === 'production' means we have a limited
