@@ -1,8 +1,0 @@
-{
-    "globals": {
-      "casper": true
-    },
-    "rules": {
-        "require-jsdoc": 0
-    }
-}
