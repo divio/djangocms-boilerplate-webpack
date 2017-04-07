@@ -20,6 +20,6 @@ before_install:
 before_script:
   - npm install -g gulp
 
-script:
-  - gulp tests
-  - gulp tests:integration
+# script:
+#   - gulp tests
+#   - gulp tests:integration

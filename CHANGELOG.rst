@@ -2,10 +2,26 @@
 djangocms-boilerplate-webpack
 #############################
 
+
+2.0.0
+=====
+
+- Upgraded to Node 6.10
+- Upgraded to latest Webpack version
+- Complete overhaul to the gulp tasks and structure
+- Simplified the ``private/sass`` structure
+- Moved javascript to ``private/js`` and updated structure
+- Deprecated font icons in favour of svg
+- Updated linting tools now using ESLint and Stylelint
+- Updated documentation
+- Removed testing framework from boilerplate
+
+
 1.2.1
 =====
 
 - Inherited gitignore from Divio Cloud
+
 
 1.2.0
 =====
