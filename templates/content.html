@@ -13,10 +13,7 @@
             <div class="navbar-header">
                 {# INFO: the logo should be placed first for seo reasons #}
                 <h1 class="navbar-brand">
-                    <a href="{% url "pages-root" %}">
-                        <span class="sr-only">{{ request.site.name }}</span>
-                        <img src="{% static "img/logo-divio-white.svg" %}" width="200px" alt="{{ request.site.name }}" />
-                    </a>
+                    <a href="{% url "pages-root" %}">{{ request.site.name }}</a>
                 </h1>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".js-navbar-header">
                     {% for row in 123|make_list %}<span class="icon-bar"></span>{% endfor %}
