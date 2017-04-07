@@ -2,6 +2,15 @@
 django CMS webpack boilerplate
 ##############################
 
+TODO for 2.0
+============
+
+- Cleanup basic template
+- Add image optimisation task
+- Add critical css inliner task
+- Adapt documentation
+
+
 |Build Status| |Coverage Status|
 
 Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
