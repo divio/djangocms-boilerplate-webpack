@@ -1,6 +1,6 @@
-##############################
+==============================
 django CMS webpack boilerplate
-##############################
+==============================
 
 |Build Status| |Coverage Status|
 
@@ -15,16 +15,14 @@ This Boilerplate can be used with standalone django CMS websites as well as
 on the `Divio Cloud <http://www.divio.com/>`_ platform.
 
 
-*************
 Documentation
-*************
+=============
 
 A full documentation can be found on `Read the Docs <http://django-cms-boilerplate-webpack.rtfd.org>`_.
 
 
-************
 Contribution
-************
+============
 
 You are very welcome improving this boilerplate for Aldryn and your everyday use, especially the documentation always
 needs love. Feel free to fork and send us pull requests and checkout the
