@@ -12,9 +12,9 @@ module.exports = function (gulp, opts) {
             }))
             // inline the file into the correct location
             // written into templates/includes/critical_css.html
+            .pipe(cleanCSS())
             .pipe(concat.header('<style>'))
             .pipe(concat.footer('</style>'))
-            .pipe(cleanCSS())
             .pipe(rename({
                 basename: 'critical_css',
                 extname: '.html',
