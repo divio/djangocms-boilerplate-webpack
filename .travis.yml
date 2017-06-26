@@ -15,6 +15,5 @@ env:
 before_script:
   - npm install -g gulp
 
-# script:
-#   - gulp tests
-#   - gulp tests:integration
+script:
+  - gulp lint

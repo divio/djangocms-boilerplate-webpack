@@ -52,6 +52,7 @@
     left: 0;
     z-index: 9999;
 
+    // stylelint-disable-next-line
     a {
         @extend .sr-only;
         @extend .sr-only-focusable;
