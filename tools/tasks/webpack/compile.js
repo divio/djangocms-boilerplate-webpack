@@ -13,7 +13,11 @@ module.exports = function (gulp, opts) {
             if (err) {
                 throw new gutil.PluginError('webpack', err);
             }
-            gutil.log('[webpack]', stats.toString({ colors: true }));
+            gutil.log('[webpack]', stats.toString({
+                colors: true ,
+                maxModules: Infinity,
+                optimizationBailout: true,
+            }));
             if (!opts.argv.watch) {
                 callback();
             }

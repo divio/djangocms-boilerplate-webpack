@@ -31,6 +31,7 @@ if (argv.debug) {
         })
     );
 } else {
+    plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
     plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
     plugins.push(
         new webpack.LoaderOptionsPlugin({
@@ -65,7 +66,7 @@ module.exports = {
         // detail: path.join(__dirname, 'detail.js'),
     },
     output: {
-        path: path.join(__dirname, '..', '..', 'static', 'js'),
+        path: path.join(__dirname, '..', '..', 'static', 'js', 'dist'),
         filename: '[name].bundle.js',
         publicPath: '/static/',
     },
