@@ -45,24 +45,34 @@ const PROJECT_PATTERNS = {
         PROJECT_PATH.sass + '/**/*.{scss,sass}',
         '!' + PROJECT_PATH.sass + '/libs/_svgsprite.scss',
     ],
-    svg: [
-        PROJECT_PATH.svg + '/**/*.svg',
-    ],
+    svg: {
+        icons: [PROJECT_PATH.svg + '/icons/**/*.svg'],
+        // other: [PROJECT_PATH.svg + '/other/**/*.svg'],
+    },
 };
 
 /**
- * Checks project deployment
+ * Generic utility to import gulp tasks and pass options to them
+ *
  * @param {String} id - task name
- * @returns {Object} - task which finished
+ * @param {Object} [extra] - optional options to pass
+ * @returns {Function} - task definition
  */
-function task(id) {
-    return require('./tools/tasks/' + id)(gulp, {
-        PROJECT_ROOT: PROJECT_ROOT,
-        PROJECT_PATH: PROJECT_PATH,
-        PROJECT_PATTERNS: PROJECT_PATTERNS,
-        argv: argv,
-    });
+function task(id, extra) {
+    return require('./tools/tasks/' + id)(
+        gulp,
+        Object.assign(
+            {
+                PROJECT_ROOT: PROJECT_ROOT,
+                PROJECT_PATH: PROJECT_PATH,
+                PROJECT_PATTERNS: PROJECT_PATTERNS,
+                argv: argv,
+            },
+            extra
+        )
+    );
 }
+
 
 // #############################################################################
 // TASKS
@@ -105,9 +115,11 @@ gulp.task('webpack:compile', task('webpack/compile'));
 
 /**
  * Usage:
- * - "gulp icons" (compiles to sprites and sass)
+ * - "gulp icons" (compiles to sprites)
  */
-gulp.task('icons', task('icons/svgsprite'));
+gulp.task('icons', ['icons:sprite:icons']);
+gulp.task('icons:sprite:icons', task('icons/svgsprite', { svg: 'icons' }));
+// gulp.task('icons:sprite:other', task('icons/svgsprite', { svg: 'other' }));
 
 /**
  * Usage:

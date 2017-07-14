@@ -1,0 +1,43 @@
+/* stylelint-disable */
+
+$svg-colors: (
+    "brand-primary": $brand-primary,
+    "brand-danger": $brand-danger,
+    "brand-warning": $brand-warning,
+    "brand-info": $brand-info,
+    "brand-success": $brand-success,
+    "gray-darker": $gray-darker,
+    "gray-dark": $gray-dark,
+    "gray": $gray,
+    "gray-light": $gray-light,
+    "gray-lighter": $gray-lighter,
+    "white": white,
+    "black": black,
+);
+
+.icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 1em;
+    height: 1em;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@each $key in map-keys($svg-colors) {
+    .icon-#{$key} {
+        color: map-get($svg-colors, $key);
+
+        svg {
+            fill: map-get($svg-colors, $key);
+        }
+    }
+}
+
+svg path {
+    fill: inherit;
+}
