@@ -9,13 +9,13 @@ const path = require('path');
 process.env.NODE_ENV = (argv.debug) ? 'development' : 'production';
 
 // Bundle splitting. Don't forget to {% addtoblock "js" %} afterwards
-//
-// plugins.push(
-//     new webpack.optimize.CommonsChunkPlugin({
-//         name: 'base',
-//         chunks: ['base', 'detail'],
-//     })
-// );
+
+plugins.push(
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'base',
+        chunks: ['base', 'cms'],
+    })
+);
 
 // add plugins depending on if we are debugging or not
 if (argv.debug) {
@@ -63,6 +63,7 @@ module.exports = {
     devtool: argv.debug ? 'cheap-module-eval-source-map' : false,
     entry: {
         base: path.join(__dirname, 'base.js'),
+        cms: path.join(__dirname, 'cms.js'),
         // detail: path.join(__dirname, 'detail.js'),
     },
     output: {
