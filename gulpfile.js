@@ -107,11 +107,12 @@ gulp.task('lint:javascript', task('lint/javascript'));
  * Usage:
  * - "gulp webpack" (compiles javascript)
  * - "gulp webpack --debug" (disables compressions and adds sourcemaps)
- * - "gulp webpack --watch" (separately watch js instead of gulp watch)
+ * - "gulp webpack:watch" (separately watch js instead of simply running `gulp`)
  * - "gulp webpack:compile" (compiles javascript)
  */
 gulp.task('webpack', ['webpack:compile']);
 gulp.task('webpack:compile', task('webpack/compile'));
+gulp.task('webpack:watch', task('webpack/compile', { watch: true }));
 
 /**
  * Usage:
@@ -135,10 +136,12 @@ gulp.task('optimise:images', task('optimise/images'));
  * process.env.GULP_MODE === 'production' means we have a limited
  * subset of tasks to speed up the deployment / installation process.
  */
-gulp.task('default', ['sass', 'webpack', 'lint']);
+gulp.task('default', ['sass', 'webpack', 'lint', 'watch']);
+
 gulp.task('watch', function () {
+    gulp.start('webpack:watch');
     gulp.watch(PROJECT_PATTERNS.sass, ['sass', 'lint:sass']);
-    gulp.watch(PROJECT_PATTERNS.js, ['webpack', 'lint:javascript']);
+    gulp.watch(PROJECT_PATTERNS.js, ['lint:javascript']);
 });
 // used on the cloud
 gulp.task('build', ['sass', 'webpack']);
