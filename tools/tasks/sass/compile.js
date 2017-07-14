@@ -12,6 +12,8 @@ const eyeglass = new Eyeglass({
     importer: function (uri, prev, done) {
         done(sass.compiler.types.NULL);
     },
+    // important to have no rounding errors
+    precision: 10,
 });
 
 
@@ -24,6 +26,15 @@ module.exports = function (gulp, opts) {
                 gutil.log(gutil.colors.red(
                     'Error (' + error.plugin + '): ' + error.messageFormatted)
                 );
+
+                // used on Divio Cloud to inform divio app about the errors in
+                // SASS compilation
+                if (process.env.EXIT_ON_ERRORS) {
+                    process.exit(1); // eslint-disable-line
+                } else {
+                    // in dev mode - just continue
+                    this.emit('end');
+                }
             })
             .pipe(
                 postcss([
