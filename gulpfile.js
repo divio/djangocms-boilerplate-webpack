@@ -78,6 +78,9 @@ function task(id, extra) {
 // TASKS
 
 /**
+ * WARNING: postcss-critical-split is considered experimental and may be buggy, so it's
+ * commented out by default
+ *
  * Usage:
  * - "gulp sass" (generates sass, splits the files, and injects the code)
  * - "gulp sass --debug" (to generate unminified css with sourcemaps)
@@ -86,7 +89,8 @@ function task(id, extra) {
  * - "gulp sass:rest" (splits the base.css with the remaining "rest" css)
  * - "gulp sass:inline" (injects the base-critical.css as inline css into the template)
  */
-gulp.task('sass', ['sass:critical', 'sass:rest', 'sass:inline']);
+// gulp.task('sass', ['sass:critical', 'sass:rest', 'sass:inline']);
+gulp.task('sass', ['sass:compile']);
 gulp.task('sass:compile', task('sass/compile'));
 gulp.task('sass:critical', ['sass:compile'], task('sass/critical'));
 gulp.task('sass:rest', ['sass:compile'], task('sass/rest'));

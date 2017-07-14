@@ -20,7 +20,7 @@
     {% endblock meta_tags %}
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
     <!--[if IE]><link rel="shortcut icon" href="{% static 'favicon.ico' %}"><![endif]-->
-    {% include "includes/critical_css.html" %}
+    {# {% include "includes/critical_css.html" %} #}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% render_block "css" %}
     {% block extrahead %}{% endblock %}
