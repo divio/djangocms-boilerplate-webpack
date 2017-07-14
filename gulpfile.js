@@ -47,6 +47,7 @@ const PROJECT_PATTERNS = {
     ],
     svg: {
         icons: [PROJECT_PATH.svg + '/icons/**/*.svg'],
+        // Uncomment in order to have multiple icon sets
         // other: [PROJECT_PATH.svg + '/other/**/*.svg'],
     },
 };
@@ -79,7 +80,6 @@ function task(id, extra) {
 
 /**
  * WARNING: postcss-critical-split is considered experimental and may be buggy, so it's
- * commented out by default
  *
  * Usage:
  * - "gulp sass" (generates sass, splits the files, and injects the code)
@@ -92,9 +92,9 @@ function task(id, extra) {
 // gulp.task('sass', ['sass:critical', 'sass:rest', 'sass:inline']);
 gulp.task('sass', ['sass:compile']);
 gulp.task('sass:compile', task('sass/compile'));
-gulp.task('sass:critical', ['sass:compile'], task('sass/critical'));
-gulp.task('sass:rest', ['sass:compile'], task('sass/rest'));
-gulp.task('sass:inline', ['sass:critical'], task('sass/inline'));
+// gulp.task('sass:critical', ['sass:compile'], task('sass/critical'));
+// gulp.task('sass:rest', ['sass:compile'], task('sass/rest'));
+// gulp.task('sass:inline', ['sass:critical'], task('sass/inline'));
 
 /**
  * Usage:
@@ -124,6 +124,7 @@ gulp.task('webpack:watch', task('webpack/compile', { watch: true }));
  */
 gulp.task('icons', ['icons:sprite:icons']);
 gulp.task('icons:sprite:icons', task('icons/svgsprite', { svg: 'icons' }));
+// Uncomment in order to have multiple icon sets
 // gulp.task('icons:sprite:other', task('icons/svgsprite', { svg: 'other' }));
 
 /**
