@@ -45,7 +45,8 @@ and the `JavaScript component <https://github.com/divio/djangocms-boilerplate-we
 
 .. note::
 
-    Aldryn Bootstrap 3 uses a 24 column based grid setting instead of the default 12. You can change this setting in ``private/sass/settings/_bootstrap.scss``.
+    django CMS Boilerplate Webpack uses the default 12 column based grid setting.
+    You can change this setting in ``private/sass/settings/_bootstrap.scss``.
 
 
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has
@@ -54,45 +55,19 @@ in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_
 icon set.
 
 
-Font Awesome
-============
-
-The `Font Awesome library <http://fortawesome.github.io/Font-Awesome>`_
-offers a larger and better
-`variety of icons <http://fortawesome.github.io/Font-Awesome/icons/>`_
-than the Bootstrap defaults. Additional
-`utility classes <http://fortawesome.github.io/Font-Awesome/examples/>`_
-are also available.
-
-The `library <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/private/sass/libs/fontawesome/>`_
-is similarly integrated as bootstrap-sass within the ``libs`` folder.
-
-
 JavaScript
 ==========
 
-We are implementing the latest **2.x.x** versions of
-`jQuery <http://jquery.com>`_ as they are released. In addition we encourage
-the use of `class.js <https://github.com/FinalAngel/classjs>`_, a simple library
-that helps out with the modular pattern in :doc:`/guidelines/javascript`.
+We are implementing the latest **3.x.x** versions of
+`jQuery <http://jquery.com>`_ as they are released.
 
 - http://jquery.com
-- https://github.com/FinalAngel/classjs
 
 In addition several commonly-used shims are available to you including:
 
 - `The HTML5 Shiv <https://github.com/aFarkas/html5shiv>`_
-- `Respond.js <https://github.com/scottjehl/Respond>`_
-- `<swfobject> <https://code.google.com/p/swfobject>`_
 - `Outdated Browser <http://outdatedbrowser.com>`_
 - `console.log wrapper <https://developer.chrome.com/devtools/docs/console-api>`_
-
-
-Addons
-------
-
-We are currently implementing the `select2.js bootstrap version
-<http://fk.github.io/select2-bootstrap-css/>`_ as default addon.
 
 
 Gulp
@@ -135,8 +110,7 @@ Configuration
 There are several **configuration files** included such as:
 
 - `EditorConfig <http://editorconfig.org/>`_ within  ``.editorconfig``
-- `CSSComb <http://csscomb.com/>`_ within ``.csscomb.json``
 - `ESLint <http://eslint.org/>`_ within ``.eslintrc.json``
-- `SCSS-Lint <https://github.com/brigade/scss-lint>`_ within ``scss-lint.json``
+- `Stylelint <stylelint.io>`_ within ``.stylelintrc.json``
 
 Please mind that they are ignored if your editor doesn't support them.

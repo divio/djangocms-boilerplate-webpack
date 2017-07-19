@@ -1,0 +1,16 @@
+$cms-condensed-structure-width: 402px;
+
+.cms-toolbar-expanded {
+    margin-top: 0 !important;
+    padding-top: 46px;
+}
+
+@media (min-width: ($screen-lg + $cms-condensed-structure-width)) {
+    .cms-structure-mode-structure {
+        width: calc(100% - #{$cms-condensed-structure-width});
+    }
+
+    .cms-structure-mode-structure .navbar-fixed-top {
+        right: $cms-condensed-structure-width;
+    }
+}

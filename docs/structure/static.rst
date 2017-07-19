@@ -44,12 +44,5 @@ js/
 ===
 
 The same structure approach as described within :doc:`private` is applied to
-the JS directory. ``/layout``, ``/settings`` and ``/sites`` are not required,
-but may be used. jQuery is an essential part and should be
+the JS directory. jQuery is an essential part and should be
 treated the same as the Bootstrap component.
-
-
-swf/
-====
-
-Old school, currently only required to use ``/static/js/libs/swfobject.min.js``.

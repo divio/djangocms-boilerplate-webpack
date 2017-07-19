@@ -3,7 +3,7 @@
     "package-name": "djangocms-boilerplate-webpack",
     "version": "1.2.1",
     "templates": [
-        ["base.html", "base"]
+        ["content.html", "Content"]
     ],
     "excluded": [
         "docs",

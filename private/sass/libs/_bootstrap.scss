@@ -5,15 +5,11 @@
  */
 
 // Core variables and mixins
+
 @import "bootstrap-sass/bootstrap/variables";
 @import "bootstrap-sass/bootstrap/mixins";
-
-// Reset and dependencies
 @import "bootstrap-sass/bootstrap/normalize";
 @import "bootstrap-sass/bootstrap/print";
-// @import "bootstrap-sass/bootstrap/glyphicons";
-
-// Core CSS
 @import "bootstrap-sass/bootstrap/scaffolding";
 @import "bootstrap-sass/bootstrap/type";
 @import "bootstrap-sass/bootstrap/code";

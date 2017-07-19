@@ -4,7 +4,7 @@ Templates
 
 .. note::
 
-    Aldryn Boilerplate Bootstrap 3 follows django CMS good practices, and
+    django CMS Boilerplate Webpack follows django CMS good practices, and
     provides three layers of site template inheritance using ``{% extends %}``.
     See `Django template engine <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
 
@@ -14,11 +14,11 @@ From the top down the three layers are:
 - ``base_root.html``
 
 
-==================
-``base_root.html``
-==================
+==============
+``base.html``
+=============
 
-``base_root.html`` sets up the components that will rarely if ever need to be
+``base.html`` sets up the components that will rarely if ever need to be
 changed, and that you want to keep out of sight and out of mind as much as
 possible.
 
@@ -31,21 +31,21 @@ need to. To this end it provides an empty ``{% block extend_root %}{% endblock %
 that inheriting templates will override to provide the page's content.
 
 In addition, Addons such as `Aldryn News & Blog <https://github.com/aldryn/aldryn-newsblog>`_
-in the Aldryn Collection family of applications are designed to use the same
+in the Divio Cloud Collection family of applications are designed to use the same
 JavaScript frameworks throughout, so there is no need for references to them
 to be made anywhere else than ``base_root.html``.
 
 
-=============
-``base.html``
-=============
+================
+``content.html``
+================
 
-``base.html`` is the template that *designers* will be most interested in.
-It fills in the bare HTML elements of ``base_root.html``, and allows page
+``content.html`` is the template that *designers* will be most interested in.
+It fills in the bare HTML elements of ``base.html``, and allows page
 content structures and layouts (headings, ``divs``, navigation menus and so on)
 to be created within ``{% block extend_root %}``.
 
-``base.html`` contains an *empty* ``{% block content %}``, that - in templates
+``content.html`` contains an *empty* ``{% block content %}``, that - in templates
 that extend it - is filled with ``{% placeholder content %}`` as well as width
 cues for images etc.
 
