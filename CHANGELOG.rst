@@ -7,6 +7,7 @@ djangocms-boilerplate-webpack
 
 - Added an example of using web fonts
 - Removed leftover FontAwesome references
+- Fixed a problem with bundle splitting and IE11
 
 2.0.0
 =====
