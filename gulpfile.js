@@ -79,7 +79,7 @@ function task(id, extra) {
 // TASKS
 
 /**
- * WARNING: postcss-critical-split is considered experimental and may be buggy, so it's
+ * WARNING: postcss-critical-split is considered experimental and may be buggy, so it's disabled by default
  *
  * Usage:
  * - "gulp sass" (generates sass, splits the files, and injects the code)
