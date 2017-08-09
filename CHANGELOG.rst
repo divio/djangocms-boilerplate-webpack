@@ -2,6 +2,10 @@
 djangocms-boilerplate-webpack
 #############################
 
+2.0.1
+=====
+
+- Added an example of using web fonts
 
 2.0.0
 =====
