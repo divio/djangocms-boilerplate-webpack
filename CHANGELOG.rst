@@ -6,6 +6,7 @@ djangocms-boilerplate-webpack
 =====
 
 - Added an example of using web fonts
+- Removed leftover FontAwesome references
 
 2.0.0
 =====

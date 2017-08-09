@@ -51,8 +51,7 @@ and the `JavaScript component <https://github.com/divio/djangocms-boilerplate-we
 
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has
 been `disabled <https://github.com/divio/djangocms-boilerplate-webpack/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
-in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_
-icon set.
+in favour of the custom icon set that can be built with ``gulp icons``.
 
 
 JavaScript
