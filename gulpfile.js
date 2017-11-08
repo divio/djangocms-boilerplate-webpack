@@ -122,8 +122,14 @@ gulp.task('webpack:watch', task('webpack/compile', { watch: true }));
  * Usage:
  * - "gulp icons" (compiles to sprites)
  */
-gulp.task('icons', ['icons:sprite:icons']);
+gulp.task('icons', ['icons:sprite:icons:json']);
 gulp.task('icons:sprite:icons', task('icons/svgsprite', { svg: 'icons' }));
+
+/**
+ * Used as part of `gulp icons` - creates iconset.json that can be used for icon plugins, e.g. aldryn-bootstrap3 or
+ * djangocms-bootstrap4 icon plugins, as well as for generating iconography page in styleguide
+ */
+gulp.task('icons:sprite:icons:json', ['icons:sprite:icons'], task('icons/json', { svg: 'icons' }))
 // Uncomment in order to have multiple icon sets
 // gulp.task('icons:sprite:other', task('icons/svgsprite', { svg: 'other' }));
 
