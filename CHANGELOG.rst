@@ -2,6 +2,12 @@
 djangocms-boilerplate-webpack
 #############################
 
+2.0.2 (unreleased)
+==================
+
+- Fixed data attributes for correct messages consumption in django CMS 3.5
+
+
 2.0.1
 =====
 
