@@ -1,4 +1,5 @@
 const argv = require('minimist')(process.argv.slice(2));
+const WebpackPolyfillPlugin = require('webpack2-polyfill-plugin');
 const plugins = [];
 const webpack = require('webpack');
 const path = require('path');
@@ -8,8 +9,11 @@ const path = require('path');
 
 process.env.NODE_ENV = (argv.debug) ? 'development' : 'production';
 
-// Bundle splitting. Don't forget to {% addtoblock "js" %} afterwards
+plugins.push(
+    new WebpackPolyfillPlugin()
+);
 
+// Bundle splitting. Don't forget to {% addtoblock "js" %} afterwards
 plugins.push(
     new webpack.optimize.CommonsChunkPlugin({
         name: 'base',

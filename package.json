@@ -33,7 +33,8 @@
     "minimist": "^1.2.0",
     "postcss-critical-split": "^2.5.0",
     "svg4everybody": "^2.1.8",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack2-polyfill-plugin": "0.0.2"
   },
   "devDependencies": {}
 }
