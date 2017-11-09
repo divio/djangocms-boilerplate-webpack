@@ -21,6 +21,12 @@
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
     <!--[if IE]><link rel="shortcut icon" href="{% static 'favicon.ico' %}"><![endif]-->
     {# {% include "includes/critical_css.html" %} #}
+
+    {% comment %}
+        {# use this to start loading fonts before finishing parsing css #}
+        <link rel="preload" href="{% static "fonts/my-font.woff2" %}" as="font" type="font/woff2" crossorigin>
+    {% endcomment %}
+
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% render_block "css" %}
     {% block extrahead %}{% endblock %}

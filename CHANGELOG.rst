@@ -2,6 +2,14 @@
 djangocms-boilerplate-webpack
 #############################
 
+2.0.2 (unreleased)
+==================
+
+- Fixed data attributes for correct messages consumption in django CMS 3.5
+- Added example for preoading fonts in ``base.html`` template
+- Added json generation for icons plugins
+
+
 2.0.1
 =====
 
