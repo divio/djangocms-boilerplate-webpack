@@ -8,6 +8,7 @@ module.exports = function(gulp, opts) {
             mode: 'symbols',
             preview: true,
             svgPath: `../sprites/${opts.svg}.svg`,
+            selector: "icon-%f",
             svg: {
                 symbols: `${opts.PROJECT_PATH.sprites}/${opts.svg}.svg`,
             },

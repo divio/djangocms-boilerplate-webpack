@@ -4,7 +4,7 @@ const fs = require('fs');
 module.exports = function(gulp, opts) {
     return function() {
         const list = fs.readdirSync(opts.PROJECT_PATH.svg + '/' + opts.svg).map(file =>
-            `"${file.replace(/\.svg$/, '')}"`
+            `"icon-${file.replace(/\.svg$/, '')}"`
         ).join(',\n');
 
         const content = `
