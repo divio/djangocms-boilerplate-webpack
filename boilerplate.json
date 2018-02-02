@@ -1,7 +1,7 @@
 {
-    "identifier": "glasnt-custom-djangocms-webpack",
-    "package-name": "glasnt-custom-djangocms-webpack",
-    "version": "3.0.1",
+    "identifier": "bootstrap3",
+    "package-name": "djangocms-boilerplate-webpack",
+    "version": "2.0.1",
     "templates": [
         ["content.html", "Content"]
     ],
