@@ -9,6 +9,7 @@ djangocms-boilerplate-webpack
 - Added example for preoading fonts in ``base.html`` template
 - Added json generation for icons plugins
 - Changed the names of the icons generated (iconset prefix is always added)
+- Fixed CKEditor styles menu
 
 
 2.0.1
