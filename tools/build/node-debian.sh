@@ -3,9 +3,12 @@ set -e
 
 source $NVM_DIR/nvm.sh
 
+RUN apt-get update -y && \
+    apt-get install -y build-essential --no-install-recommends
+
 # ensure python2 is available by name for gyp
 if [ ! -f /usr/bin/python2 ]; then
-  apt-get update && apt-get install -y python2.7 --no-install-recommends
+  apt-get install -y python2.7 --no-install-recommends
   ln -sn /usr/bin/python2.7 /usr/bin/python2
 fi
 

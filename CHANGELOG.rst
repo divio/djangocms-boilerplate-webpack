@@ -2,6 +2,12 @@
 djangocms-boilerplate-webpack
 #############################
 
+2.0.3
+=====
+
+- Update build process for Debian Stretch compatibility
+
+
 2.0.2
 =====
 
